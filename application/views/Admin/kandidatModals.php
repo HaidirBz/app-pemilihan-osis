@@ -38,7 +38,7 @@
 					<div class="row">
 						<div class="col-12">
 							<div class="card-body">
-								<textarea class="form-control" id="summernote1" name="visi" required><b>Kandidat Osis</b><br>Masukan Visi Ketua dan Wakil Kandidat Osis</textarea>
+								<textarea class="summernoteVisi" id="" name="visi" required><b>Visi Kandidat Osis</b><br>Masukan Visi Ketua dan Wakil Kandidat Osis</textarea>
 							</div>
 						</div>
 					</div>
@@ -48,7 +48,7 @@
 					<div class="row">
 						<div class="col-12">
 							<div class="card-body">
-								<textarea class="form-control" id="summernote2" name="misi" required><b>Kandidat Osis</b><br>Masukan Misi Ketua dan Wakil Kandidat Osis</textarea>
+								<textarea class="summernoteMisi" id="" name="misi" required><b>Misi Kandidat Osis</b><br>Masukan Misi Ketua dan Wakil Kandidat Osis</textarea>
 							</div>
 						</div>
 					</div>
@@ -88,15 +88,15 @@
 					<p align="center">
 						<i><b>Slogan, Visi dan Misi Ketua dan Wakil Ketua Osis</b></i>
 					</p>
-
+					<hr>
 					<p align="center">
 						<img src="<?= base_url('assets/images/faces/') ?><?= $detail['foto'] ?>" alt="Profile" style="min-height: 350px; max-height:350px;"/>
 					</p>
 
 					<p align="center">
-						<u>No Urut <?= $detail ['no_urut']?></u>
+						<b>No Urut <?= $detail ['no_urut']?></b>
 					</p>
-
+					<hr>
 					<p align="center">
 						<i><b>Slogan : <?= $detail ['slogan'] ?></b></i>
 					</p>
@@ -127,6 +127,7 @@
 
 <!-- Edit Data -->
 <?php foreach ($kandidat as $edit):?>
+
 	<form enctype='multipart/form-data' action="<?=base_url("Admin/editKandidat")?>/<?=$edit['id_kandidat']?>" method="POST">
 
 		<div class="modal fade text-left" id="edit<?=$edit['id_kandidat']?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel130" aria-hidden="true">
@@ -182,7 +183,7 @@
 							<div class="row">
 								<div class="col-12">
 									<div class="card-body">
-										<textarea class="form-control" id="summernote3" name="visi"><?= $edit['visi']?></textarea>
+										<textarea class="summernoteVisi" id="" data-toggle="visi" name="visi"><?= $edit['visi']?></textarea>
 									</div>
 								</div>
 							</div>
@@ -192,7 +193,7 @@
 							<div class="row">
 								<div class="col-12">
 									<div class="card-body">
-										<textarea class="form-control" id="summernote4" name="misi"><?= $edit['misi']?></textarea>
+										<textarea class="summernoteMisi" id="" name="misi"><?= $edit['misi']?></textarea>
 									</div>
 								</div>
 							</div>
